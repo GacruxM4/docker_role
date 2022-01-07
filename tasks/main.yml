@@ -19,5 +19,5 @@
   when: ansible_distribution == "CentOS"
 
 - name: "run the script"
-  ansible.builtin.script: /home/{{ ansible_user }}/install_docker.sh
+  ansible.builtin.command: "sh /home/{{ ansible_user }}/install_docker.sh"
   when: ansible_docker0 is undefined
